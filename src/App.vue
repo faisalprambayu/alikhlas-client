@@ -1,28 +1,35 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header/>
+    <!-- <Breadcrumbs/> -->
+    <!-- <AddTodo/> -->
+    <router-view />
+    <Footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/layout/Header';
 
-export default {
-  name: 'App',
+import Footer from './components/layout/Footer';
+// import AddTodo from './components/AddTodo';
+
+export default{
+  name : 'app',
   components: {
-    HelloWorld
+    Header,
+    Footer,
+    // AddTodo,
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  .footer .footer-top {
+    background: white url(assets/img/footer-bg.png) no-repeat right top;
+    background-size: contain;
+    border-top: 1px solid #e1ecff;
+    border-bottom: 1px solid #e1ecff;
+    padding: 60px 0 30px 0;
+  }
 </style>
